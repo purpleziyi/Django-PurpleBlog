@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PurpleBlog</title>
+    <link rel="stylesheet" href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap5/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap5/bootstrap.min.css' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+  <header class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle border-bottom mb-3">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>    
+          <li><a href="#" class="nav-link px-2 text-secondary">Blog</a></li>     
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-primary me-2">Login</button>
+          <button type="button" class="btn btn-primary">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+<main class="container bg-white p-3 rounded">
+    <div style="max-width: 330px;" class="m-auto">
+        <h1>Register</h1>
+        <form action="" method="POST">
+            <div class="mb-3">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" placeholder="Username">
+            </div>
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" placeholder="email">
+            </div>
+            <div class="mb-3">
+                <label>Email</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Verification Code"
+                           aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button"get verification code</button>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label>password</label>
+                <input type="password" name="password" class="form-control" placeholder="password">
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary w-100">register now</button>
+            </div>
+        </form>
+    </div>
+</main>
+</body>
+</html>

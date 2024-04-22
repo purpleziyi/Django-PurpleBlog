@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'highlight/styles/github-dark.min.css' %}">
+    <script src="{% static 'highlight/highlight.min.js' %}"></script>
+{% endblock %}
+
+{% block main %}
+	<h1>{{ blog.title }}</h1>
+    <hr>
+      <div class="mt-2">
+        <img src="{% static 'image/avatar.webp' %}" class="rounded-circle" width="30" height="30" alt="">
+        <span class="ms-2">{{ blog.author.username }}</span>
+        <span class="ms-2">published on</span>
+        <span class="ms-2">{{ blog.pub_time|date:"d/m/Y h:i" }}</span>  <!--日期部分，利用date过滤器-->
+    </div>
+    <hr>
+    <div class="py-2">
+        {{ blog.content|safe }}     <!--内容部分，利用safe过滤器-->
+    </div>
+    <hr> 
+      <div class="mt-2">
+        <h3>Comment（{{ blog.comments.all|length }}）</h3>    <!--评论-->
+        <form action="{% url 'blog:pub_comment' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="blog_id" value="{{ blog.id }}">            
+            <div class="mt-2">
+                <input type="text" class="form-control" placeholder="Please enter a comment"  name="content">
+            </div>
+            <div class="text-end mt-2">
+                <button type="button" class="btn btn-primary">comment</button>
+            </div>
+        </form>
+    </div>    
+      <div class="mt-2">
+        <ul class="list-group list-group-flush">
+          {% for comment in blog.comments.all %}
+              <li class="list-group-item mb-3">
+                  <div class="d-flex justify-content-between text-body-secondary">
+                      <div class="user-info">
+                          <img src="{% static 'image/avatar.webp' %}" class="rounded-circle" width="40" height="40" alt="">
+                          <span class="ms-2">{{ comment.author.username }}</span>
+                      </div>
+                      <div class="create-time" style="line-height: 40px;">{{ comment.pub_time|date:"d/m/Y h:i" }}</div>
+                  </div>
+                  <div class="mt-2">{{ comment.content }}</div>
+              </li>
+          {% endfor %}           
+        </ul>
+    </div>
+    <script>
+    hljs.highlightAll();
+    </script>
+{% endblock %}

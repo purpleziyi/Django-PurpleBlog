@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PurpleBlog</title>
+    <link rel="stylesheet" href="{% static 'bootstrap5/bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap5/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap5/bootstrap.min.css' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+  <header class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle border-bottom mb-3">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>    
+          <li><a href="#" class="nav-link px-2 text-secondary">Blog</a></li>     
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-primary me-2">Login</button>
+          <button type="button" class="btn btn-primary">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container bg-white p-3 rounded-2">
+      <h1>Django Daily Practice</h1>
+      <hr>
+      <div class="mt-2">
+        <img src="{% static 'image/avatar.webp' %}" class="rounded-circle" width="30" height="30" alt="">
+        <span class="ms-2">purpleZiyi</span>
+        <span class="ms-2">published on</span>
+        <span class="ms-2">March 29, 2024 11:28</span>
+    </div>
+    <hr>
+      <div class="py-2">
+        This is blog's details
+    </div>
+    <hr>
+      <div class="mt-2">
+        <h3>comment（10）</h3>
+        <form action="" method="POST">
+            <div class="mt-2">
+                <input type="text" class="form-control" placeholder="Please enter a comment">
+            </div>
+            <div class="text-end mt-2">
+                <button type="button" class="btn btn-primary">comment</button>
+            </div>
+        </form>
+    </div>
+      <div class="mt-2">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item mb-3">
+              <div class="d-flex justify-content-between text-body-secondary">
+                  <div class="user-info">
+                      <img src="{% static 'image/avatar.webp' %}" class="rounded-circle" width="40" height="40" alt="">
+                      <span class="ms-2">purpleZiyi</span>
+                  </div>
+                  <div class="create-time" style="line-height: 40px;">March 29, 2024 11:28</div>
+              </div>
+              <div class="mt-2">this is a comment</div>
+          </li>
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between text-body-secondary">
+                  <div class="user-info">
+                      <img src="{% static 'image/avatar.webp' %}" class="rounded-circle" width="40" height="40" alt="">
+                      <span class="ms-2">purpleZiyi</span>
+                  </div>
+                  <div class="create-time" style="line-height: 40px;">March 29, 2024 11:28</div>
+              </div>
+              <div class="mt-2">this is a comment</div>
+          </li>
+        </ul>
+    </div>
+  </main>
+</body>
+</html>
