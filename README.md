@@ -2,7 +2,7 @@
 
 Django-PurpleBlog is a Django-based project that serves as a blog platform (non-SPA). It includes functionalities such as blog publishing, viewing blog information, commenting on blog content, and searching for keywords in blog titles and content.
 
-## Technologies Used
+## Main Technologies Used
 
 - **Python 3.8:** The primary programming language.
 - **Django 5.0.4:** High-level Python Web framework.
@@ -12,9 +12,5 @@ Django-PurpleBlog is a Django-based project that serves as a blog platform (non-
 - **JavaScript:** Programming language for the web.
 - **SMTP (Simple Mail Transfer Protocol):** Protocol used for email sending.
 - **Gmail SMTP:** SMTP server used for email sending.
-- **django-tinymce:** Rich text editing tool.
-- **django-crispy-forms:** Helps in managing Django forms.
-- **django-filter:** Simplifies the creation of filters in Django.
-- **Pillow:** Python Imaging Library. Used for opening, manipulating, and saving many different image file formats.
-- **psycopg2:** PostgreSQL adapter for Python.
-- **whitenoise:** Simplifies static file serving for Python web applications.
+- **Ajax:** Asynchronous JavaScript and XML.
+- **highlight.js:** JavaScript library to highlight code.
