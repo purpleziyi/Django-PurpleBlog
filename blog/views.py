@@ -44,8 +44,8 @@ def pub_blog(request):
             return JsonResponse({'code': 400, "message": "Parameter error!"})
 
 
-@require_POST
-@login_required()   # as long as you login can you publish
+@require_POST     # used for publishing comment
+@login_required()   # as long as you login can you publish comment
 def pub_comment(request):
     blog_id = request.POST.get('blog_id')     # 获取评论id
     content = request.POST.get('content')     # 获取评论内容
