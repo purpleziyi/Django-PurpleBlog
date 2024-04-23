@@ -1,6 +1,6 @@
 # Django-PurpleBlog
 
-Django-PurpleBlog is a Django-based project that serves as a blog platform (non-SPA). It includes functionalities such as blog publishing, viewing blog information, commenting on blog content, and searching for keywords in blog titles and content.
+Django-PurpleBlog is a Django-based project that serves as a blog platform. It includes functionalities such as blog publishing, viewing blog information, commenting on blog content, and searching for keywords in blog titles and content.
 
 ## Main Technologies Used
 
