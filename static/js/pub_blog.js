@@ -33,6 +33,7 @@ window.onload = function () {
 
         let title = $("input[name='title']").val();
         let category = $("#category-select").val();
+        console.log(category)
         let content = editor.getHtml();
         let csrfmiddlewaretoken = $("input[name='csrfmiddlewaretoken']").val();
         $.ajax('/blog/pub', {
